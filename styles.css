@@ -1,0 +1,114 @@
+body {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #fce4ec, #fff8f0); /* элегантный градиент */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.invitation {
+  background-color: #fffaf8;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1 {
+  font-family: 'Cursive', Georgia, serif;
+  font-size: 36px;
+  color: #c97b6b;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.date {
+  color: #c97b6b;
+  font-weight: bold;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+p, .details span, .rsvp a {
+  font-size: 16px;
+  color: #5a4a42;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.details {
+  margin-top: 20px;
+}
+
+.details span {
+  display: block;
+  margin: 5px 0;
+}
+
+.rsvp a {
+  color: #c97b6b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Слайдшоу с рамками и уголками */
+.slideshow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.frame {
+  position: relative;
+  display: inline-block;
+}
+
+.slide {
+  width: 100%;
+  max-width: 500px;
+  border: 5px solid #f4d1c1;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+/* Декоративные уголки рамки */
+.corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #c97b6b;
+}
+
+.top-left { top: -3px; left: -3px; border-right: none; border-bottom: none; }
+.top-right { top: -3px; right: -3px; border-left: none; border-bottom: none; }
+.bottom-left { bottom: -3px; left: -3px; border-right: none; border-top: none; }
+.bottom-right { bottom: -3px; right: -3px; border-left: none; border-top: none; }
+
+.slide.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .invitation {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
